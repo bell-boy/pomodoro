@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="App" style={{ background: bg_color }}>
-			<h1> pmdo </h1>
+			<h1> pomdo </h1>
 			<p className="display-text">{Math.floor(time_display/60)}:{(time_display%60).toString().padStart(2, '0')}<sup className="sup-sub-script">{pomodoro_count}</sup></p>
 		
 			<div className="button-container">
@@ -25,6 +25,11 @@ function App() {
 					audio.play();
 					set_bg_color('#ffbebc');
 				})}> break </button>
+
+				<button onClick={() => timer(15*60, set_time_display, () => {
+					audio.play();
+					set_bg_color('#ffbebc');
+				})}> long break </button>
 			</div>
     </div>
   );
