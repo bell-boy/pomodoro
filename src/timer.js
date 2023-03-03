@@ -1,4 +1,3 @@
-import * as React from 'react';
 
 // time is the time that the timer should take, set is the set function for a reactive component, callback is a function that should be run on finish.
 let current_clock = null;
