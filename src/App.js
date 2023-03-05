@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './App.css';
-import { timer } from './timer.js';
+import { timer, stop } from './timer.js';
 
 function App() {
 	const [pomodoro_count, set_pomodoro_count] = React.useState(0);	
@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App" style={{ background: bg_color }}>
 			<h1> pomdo </h1>
-			<p className="display-text">{Math.floor(time_display/60)}:{(time_display%60).toString().padStart(2, '0')}<sup className="sup-sub-script">{pomodoro_count}</sup></p>
+			<p className="display-text" onClick={stop} >{Math.floor(time_display/60)}:{(time_display%60).toString().padStart(2, '0')}<sup className="sup-sub-script">{pomodoro_count}</sup></p>
 		
 			<div className="button-container">
 				<button onClick={() => timer(25*60, set_time_display, () => {

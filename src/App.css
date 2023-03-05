@@ -21,12 +21,20 @@ button {
 	border-radius: 5px;
 	border-style: solid;
 	cursor: pointer;
+	transition: .3s; 
 }
 
 .display-text {
 	font-size: 75px;
 	color: white;
 	margin: 0px;
+	cursor: pointer;
+	transition: .3s; 
+}
+
+.display-text:hover, button:hover {
+	color: rgb(200, 200, 200);
+	border-color: rgb(200, 200, 200); 
 }
 
 .sup-sub-script {
