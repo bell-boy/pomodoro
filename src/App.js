@@ -12,24 +12,29 @@ function App() {
 
   return (
     <div className="App" style={{ background: bg_color }}>
-			<h1> pomdo </h1>
-			<p className="display-text" onClick={stop} >{Math.floor(time_display/60)}:{(time_display%60).toString().padStart(2, '0')}<sup className="sup-sub-script">{pomodoro_count}</sup></p>
+			<div className="header">
+				<span className="logo-text">pomdo</span>
+				<button className="header-button">login</button>
+			</div>
+			<div className="body">
+				<p className="display-text" onClick={stop} >{Math.floor(time_display/60)}:{(time_display%60).toString().padStart(2, '0')}<sup className="sup-sub-script">{pomodoro_count}</sup></p>
 		
-			<div className="button-container">
-				<button onClick={() => timer(25*60, set_time_display, () => {
-					set_pomodoro_count(pomodoro_count + 1);
-					audio.play();
-					set_bg_color('#fff5ba');
-				})} > work </button>
-				<button onClick={() => timer(5*60, set_time_display, () => {
-					audio.play();
-					set_bg_color('#ffbebc');
-				})}> break </button>
+				<div className="button-container">
+					<button onClick={() => timer(25*60, set_time_display, () => {
+						set_pomodoro_count(pomodoro_count + 1);
+						audio.play();
+						set_bg_color('#fff5ba');
+					})} > work </button>
+					<button onClick={() => timer(5*60, set_time_display, () => {
+						audio.play();
+						set_bg_color('#ffbebc');
+					})}> break </button>
 
-				<button onClick={() => timer(15*60, set_time_display, () => {
-					audio.play();
-					set_bg_color('#ffbebc');
-				})}> long break </button>
+					<button onClick={() => timer(15*60, set_time_display, () => {
+						audio.play();
+						set_bg_color('#ffbebc');
+					})}> long break </button>
+				</div>
 			</div>
     </div>
   );

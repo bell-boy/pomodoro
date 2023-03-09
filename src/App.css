@@ -1,9 +1,42 @@
 .App {
 	height: 100vh;
+	width: 100vw;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+}
+
+.header {
+	height: 30px;
+	display: flex;
+	justify-content: flex-start;
 	align-items: center;
+	gap: 30px;
+	padding: 10px 20px 10px 20px;
+
+}
+
+.logo-text {
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	vertical-align: middle;
+	padding-bottom: 6px;
+}
+
+.header-button {
+	width: 100px;	
+	height: 30px;
+	font-size: 15px;
+}
+
+.body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 50px;
+	align-items: center;
+	flex-grow: 1;
 }
 
 .button-container {
@@ -14,11 +47,11 @@
 button {
 	width: 150px;
 	height: 40px;
-	font-size: 25px;
+	font-size: 20px;
 	color: rgba(255, 255, 255, 255);
 	background-color: rgba(0, 0, 0, 0);
 	border-color: white;
-	border-radius: 5px;
+	border-radius: 30px;
 	border-style: solid;
 	cursor: pointer;
 	transition: .3s; 
@@ -33,8 +66,8 @@ button {
 }
 
 .display-text:hover, button:hover {
-	color: rgb(200, 200, 200);
-	border-color: rgb(200, 200, 200); 
+	color: rgb(230, 230, 230);
+	border-color: rgb(230, 230, 230); 
 }
 
 .sup-sub-script {
